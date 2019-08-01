@@ -1,0 +1,28 @@
+	Home Work 7 Driver Used For Grading
+
+As stated in the Home Work 7 assignment, you are to create and submit with the heap files a driver named mallok_test.c that should successfully execute the suggested tests listed in the assignment. Once your driver successfully completes the general tests, you might want to compile your mallok.c (which requires mallok.h in the same folder) with the driver I created for grading named: my_mallok_test.o (I only provided the object code file for this purpose which will ONLY work on a Windows based machine - If you need to test your heap on the Institute Lab system use the 2nd object code file, my_mallok_test_lab.o listed below):
+
+     my_mallok_test.oPreview the document            -     Windows Version
+
+     my_mallok_test_lab.oPreview the document     -     Linux Institute Lab Version
+
+This grading driver begins by performing 6 general or preliminary tests similar to the tests of your mallok_test.c.  The preliminary tests are each worth 5 points.  The preliminary tests are followed by a series of 20 more involved tests of your mallok.c and .h files with 2 point penalties for each failed test.  Again, use your make file to create myheap.exe based on your driver program named mallok_test.c to make sure your heap works under your tests.  You can then test your heap with my driver.  To do so:
+
+   1.  Place your mallok.h, mallok.c, and my provided my_mallok_test.oPreview the document in the same folder (
+        my_mallok_test_lab.oPreview the document  if you are running this on the Institute Lab system).
+   2.  Execute the follow compiler/linker command at the command prompt:
+            gcc -o myheap mallok.c my_mallok_test.o                 -     Windows Version
+
+           gcc -o myheap mallok.c my_mallok_test_lab.o           -     Linux Institute Lab Version
+
+        If any errors occur it would be due to misnaming the various functions of mallok.h and mallok.c or
+        your function return values, or function parameter lists are not correct.
+   3.  Correct your source code file errors and re-compile with the command listed above.
+   4.  If no errors are reported, type the following command at the command prompt and hit Enter:
+            myheap
+   5.  This will report some general test results to the console and will create a text file named:
+            Hw7Output.txt
+   6.  Open the above file and scroll through it to see the results of all tests (this is exactly what will be
+        used to grade your projects).  Your final score is listed at the bottom of this file.
+
+Don't forget, you need to submit your mallok.c, mallok.h, mallok_test.c, and makefile all zipped in the specified folder.  Also, the makefile should contain 3 rules (each with a compiling/linking command that creates the final executable file named myheap, the mallok.o object file and the mallok_test.o object file).
